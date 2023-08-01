@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-haniibani-portfolioproj-cc5p2x2hulo.ws-eu102.gitpod.io', 'hannas-recipie.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-haniibani-portfolioproj-cc5p2x2hulo.ws-eu102.gitpod.io','hannas-recipie.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -62,7 +62,7 @@ ROOT_URLCONF = 'recipie.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
