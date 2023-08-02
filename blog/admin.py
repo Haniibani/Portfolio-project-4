@@ -10,6 +10,11 @@ class IngredientInline(admin.TabularInline):
 
 @admin.register(Recipe)
 class PostAdmin(SummernoteModelAdmin, admin.ModelAdmin):
+
+    prepopulated_fields = {'slug': ('title',)}
+    list_display = ('title', 'tag')
+    list_filter = ('status', 'created_on')
+    search_fields = ('title', 'ingredient')
     summernote_fields = ('instructions',)
     inlines = (IngredientInline,)
 
