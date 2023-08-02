@@ -5,7 +5,7 @@ from django_summernote.admin import SummernoteModelAdmin
 
 class IngredientInline(admin.TabularInline):
     model = Ingredient
-    extra = 2
+    extra = 1
 
 
 @admin.register(Recipe)
@@ -18,5 +18,3 @@ class PostAdmin(SummernoteModelAdmin, admin.ModelAdmin):
     summernote_fields = ('instructions',)
     inlines = (IngredientInline,)
 
-
-admin.site.register(Ingredient)
