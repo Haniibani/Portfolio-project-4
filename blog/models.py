@@ -33,7 +33,8 @@ class Recipe(models.Model):
         ordering = ['-created_on']
 
     def __str__(self):
-        return self.title
+        ingredients_list = [f"{ingredient.amount} {ingredient.unit} {ingredient.ingredient}" for ingredient in self.ingredient_set.all()]
+        return f"{self.title} - {' | '.join(ingredients_list)}"
 
     def number_of_likes(self):
         return self.likes.count()

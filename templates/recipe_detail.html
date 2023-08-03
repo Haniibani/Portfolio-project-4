@@ -1,5 +1,64 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
 {% block content %}
 
+<div class="masthead">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-6 masthead-text">
+                <h1 class="post-title">{{ recipe.title }}</h1>
+                <p class="post-subtitle"> {{ recipe.tag }} | {{ recipe.created_on }} </p>
+            </div>
+            <div class="d-none d-md-block col-md-6 masthead-image">
+                {% if "placeholder" in recipe.featured_image.url %}
+                <img src="https://images.pexels.com/photos/2693447/pexels-photo-2693447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="100%">
+                {% else %}
+                <img src="{{ recipe.featured_image.url }}" width="100%">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4  mt-3 left  top">
+            <div class="card-body">
+                <div class="instructions-ingredients-container">
+                    <div class="instructions">
+                        <h5>Instructions:</h5>
+                        {{ recipe.instructions | safe }}
+                    </div>
+                    <div class="ingredients">
+                        <h5>Ingredients:</h5>
+                        <ul>
+                            {% for ingredient in recipe.ingredient_set.all %}
+                            <li>{{ ingredient.amount }} {{ ingredient.unit }} {{ ingredient.ingredient }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-1">
+                        <!-- The number of likes goes before the closing strong tag -->
+                        <strong class="text-secondary"><i class="far fa-heart"></i> </strong>
+                    </div>
+                    <div class="col-1">
+                        {% with comments.count as total_comments %}
+                        <strong class="text-secondary"><i class="far fa-comments"></i>
+                            {{ recipe.total_comment }}
+                        </strong>
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
