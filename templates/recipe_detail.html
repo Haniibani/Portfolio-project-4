@@ -62,8 +62,29 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md8 card mb-4 mt-3">
+        <div class="col-md-8 card mb-4 mt-3">
+            <h3>Comments:</h3>
+            {% for comment in comments %}
+            <div class="comments" style="padding: 10px;">
+                <p>
+                    <strong>{{ comment.name }}</strong>
+                    <span class="text-muted">
+                        {{ comment.created_on }}
+                    </span> wrote:
+                </p>
+                {{ comment.body | linebreaks}}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
+
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    Your comment is awaiting approval
+                </div>
+                {% else %}
+
                 {% if user.is_authenticated %}
 
                 <h3>Leave a comment:</h3>
@@ -73,6 +94,7 @@
                     {% csrf_token %}
                     <button type="submit" class="btn btn-signup btn-lg" style="margin-top: 0.8em;">Submit</button>
                 </form>
+                {% endif %}
                 {% endif %}
             </div>
         </div>
