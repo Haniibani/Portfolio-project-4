@@ -46,10 +46,21 @@ body {
     background-color: #23BBBB;
 }
 
+.image-flash-likes {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: larger;
+}
+
 .author {
     color: white;
     margin: 4px;
     text-transform: uppercase;
+}
+
+.likes {
+    font-size: large;
 }
 
 .masthead {
