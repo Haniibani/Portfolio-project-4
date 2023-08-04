@@ -28,6 +28,7 @@ class Recipe(models.Model):
     instructions = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    likes = models.ManyToManyField(User, related_name='recipe_like', blank=True)
 
     class Meta:
         ordering = ['-created_on']
@@ -39,7 +40,7 @@ class Recipe(models.Model):
         return f"{self.title} - {' | '.join(ingredients_list)}"
 
     def number_of_likes(self):
-        return self.likes.count()
+        return self.likes.count() if self.likes else 0
 
 
 class Ingredient(models.Model):
