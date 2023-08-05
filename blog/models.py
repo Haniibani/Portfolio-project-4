@@ -49,6 +49,9 @@ class Ingredient(models.Model):
     unit = models.CharField(max_length=200)
     amount = models.IntegerField()
 
+    def __str__(self):
+        return self.ingredient
+
 
 class Comment(models.Model):
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE,
