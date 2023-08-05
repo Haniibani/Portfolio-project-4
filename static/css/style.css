@@ -22,6 +22,14 @@ main {
     margin-left: 10%;
 }
 
+.brand-centered {
+    font-family: Lato, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #361a3a;
+    text-align: center
+}
+
 .red-o {
     color: #E84610;
 }
