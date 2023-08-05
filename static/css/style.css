@@ -1,5 +1,17 @@
 body {
     background-color: #F9FAFC;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
 }
 
 .brand {
