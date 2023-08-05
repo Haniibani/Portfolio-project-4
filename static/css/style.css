@@ -207,3 +207,12 @@ main {
 .footer-bg {
     background-color: #5c4461;
 }
+
+.footer a i {
+    color: #ffffff;
+}
+
+.footer a:hover i,
+.footer a:focus i {
+    color: #9b6fa3;
+}
