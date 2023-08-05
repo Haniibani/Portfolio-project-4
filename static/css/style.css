@@ -73,7 +73,7 @@ body {
 }
 
 .masthead-text {
-    background-color: #445261;
+    background-color: #5c4461;
     color: white;
     position: relative;
 }
@@ -83,18 +83,21 @@ body {
     overflow: hidden;
 }
 
+.masthead-featured-image {
+    object-fit: cover;
+    object-position: center;
+    height: 50%;
+    width: 100%;
+}
+
 .masthead-image:after {
     content: "";
     position: absolute;
     top: 0;
-    right: 90%;
+    left: 0;
     height: 100%;
-    width: 150%;
-    background: #445261;
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
+    width: 30%; 
+    background: linear-gradient(to right, #5c4461, transparent); 
 }
 
 .post-link {
@@ -104,7 +107,7 @@ body {
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: #5c4461;
 }
 
 .post-title {
@@ -115,6 +118,12 @@ body {
 .post-subtitle {
     margin-left: 5%;
     color: lightgray;
+}
+
+.recipe-time {
+    position: absolute;
+    top: 5%;
+    right: 7%;
 }
 
 .btn-signup {
