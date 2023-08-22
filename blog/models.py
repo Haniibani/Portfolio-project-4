@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-STATUS = ((0, 'Draft'), (1, 'Published'))
+STATUS = ((0, "Draft"), (1, "Published"))
 GLUTENFREE = "Glutenfree"
 LACTOSEFREE = "Lactosefree"
 NORMAL = "Normal"
@@ -22,21 +22,24 @@ class Recipe(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     tag = models.CharField(max_length=100, choices=TAGS, default=NORMAL)
-    featured_image = CloudinaryField('image', default='placeholder')
+    featured_image = CloudinaryField("image", default="placeholder")
     updated_on = models.DateTimeField(auto_now=True)
-    estimated_time = models.IntegerField('Estimated time')
+    estimated_time = models.IntegerField("Estimated time")
     instructions = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name='recipe_like', blank=True)
+    likes = models.ManyToManyField(
+        User, related_name="recipe_like", blank=True
+    )
 
     class Meta:
-        ordering = ['-created_on']
+        ordering = ["-created_on"]
 
     def __str__(self):
         ingredients_list = [
             f"{ingredient.amount} {ingredient.unit} {ingredient.ingredient}"
-            for ingredient in self.ingredient_set.all()]
+            for ingredient in self.ingredient_set.all()
+        ]
         return f"{self.title} - {' | '.join(ingredients_list)}"
 
     def number_of_likes(self):
@@ -54,7 +57,9 @@ class Ingredient(models.Model):
 
 
 class Comment(models.Model):
-    recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
+    recipe = models.ForeignKey(
+        Recipe, on_delete=models.CASCADE, related_name="comments"
+    )
     name = models.CharField(max_length=80)
     body = models.TextField(max_length=1000)
     created_on = models.DateTimeField(auto_now_add=True)

@@ -5,20 +5,23 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         migrations.swappable_dependency(settings.AUTH_USER_MODEL),
-        ('blog', '0001_initial'),
+        ("blog", "0001_initial"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='comment',
-            name='email',
+            model_name="comment",
+            name="email",
         ),
         migrations.AddField(
-            model_name='recipe',
-            name='likes',
-            field=models.ManyToManyField(blank=True, related_name='recipe_like', to=settings.AUTH_USER_MODEL),
+            model_name="recipe",
+            name="likes",
+            field=models.ManyToManyField(
+                blank=True,
+                related_name="recipe_like",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
     ]
