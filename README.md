@@ -1,108 +1,174 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Recipie 🥧
 
-Welcome Haniibani,
+## Introduction 📜
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+Welcome to **Recipie**! Dive deep into a world exclusively crafted for pie enthusiasts, where every recipe, filling, crust, and comment is dressed in the most refined and user-friendly designs. With colors emanating warmth and typography exuding sophistication, we've ensured that our pie universe is baked to perfection!
 
 ---
 
-Happy coding!
+## Table of Contents 📖
+
+1. [Introduction](#introduction-)
+2. [UX](#ux-)
+3. [Features](#features-🛠️)
+4. [Future Enhancements](#future-enhancements-🚀)
+5. [Social Media Integration](#social-media-integration-🌐)
+6. [Testing Protocols](#testing-protocols-🧪)
+7. [Deployment Guidelines](#deployment-guidelines-🚀)
+
+---
+
+## UX 🖥️
+
+### Overall Goals
+
+- Ensure the platform reflects sophistication, using the calming colors of `.light-bg`, `.dark-bg`, and `.main-bg`.
+- Showcase featured pies and authors with the `.masthead`, styled with the `.masthead-text` and the `.masthead-image`.
+
+### The Strategy Plane
+
+Empower bakers by offering an interactive platform featuring pie recipes that are both visually appealing and easily accessible. Our `.image-container` ensures that every pie gets its spotlight, while the `.author` class highlights the creator.
+
+### The Site's Ideal User
+
+**Hobbyist Bakers**: Those who appreciate the fine craft of baking and are drawn by our meticulously styled `.card` and `.brand` designs.
+
+### Site Goals
+
+- Present pie recipes in a stylish `.card` format with emphasis on imagery using `.image-flash`.
+- Boost engagement with actionable buttons styled as `.btn-like` and `.btn-signup`.
+
+### Epics
+
+**Social Engagement**: Using the `.btn-like` to allow users to appreciate recipes and the `.post-link` to share them.
+
+### User Stories
+
+1. As a user, I want to see the brand prominently, evident in the `.brand` and `.brand-centered` styles.
+2. As a baker, the `.recipe-time` element is crucial for me to plan my baking sessions.
+
+### The Scope Plane
+
+Providing detailed pie recipes, ensuring rich content with the `.post-title` and `.post-subtitle`, and a smooth navigation experience through our `.link` design.
+
+### The Structure Plane
+
+A well-organized platform where recipes are not only easy to find but are also presented in a visually appealing manner using `.image-flash-likes` and `.masthead-featured-image`.
+
+### The Skeleton Plane
+
+#### Wireframe mock-ups
+
+These should focus on the overall layout, ensuring our `.masthead` is prominently displayed and that our cards, styled with `.card`, are neatly arranged.
+
+#### SEO Considerations
+
+Optimizing for search engines by emphasizing key elements like the `.post-title` and `.author`.
+
+---
+
+## Features 🛠️
+
+### Interactive Imagery 🖼️
+At ReciPie, visual appeal meets interactivity, making browsing pie recipes a delightful experience:
+
+- **Title Hover Effect**: Every pie recipe comes with its unique story. As users navigate the site, hovering over the title of each recipe reveals an engaging effect, thanks to the `.image-flash` design. This slight animation not only piques curiosity but also provides a hint of the artistry and details baked into every pie.
+
+- **Like Counter Hover Effect**: Gauging a pie's popularity has never been this fun! As users move their cursors over the like counter, they witness an alluring hover effect. This dynamic interaction, enabled by the `.image-flash-likes` styling, makes appreciating and liking each recipe a captivating affair.
+
+### Engaging Buttons 🔘
+Buttons on ReciPie are not just about actions; they play a crucial role in driving user engagement:
+
+- **Sign-up Button**: Presented with the `.btn-signup` class, this button warmly welcomes potential members to be a part of the ReciPie community. The interactive hover design subtly hints at the exciting baking adventures awaiting them upon joining.
+
+- **Like Button**: Showcasing a pie's magnificence is a click away. The `.btn-like` button allows users to pour their love for a recipe effortlessly. The hover feedback makes sure that every 'like' feels personal and interactive.
+
+---
+
+## Future Enhancements 📅
+
+ReciPie's ambition is not just to remain a static pie repository but to evolve into a dynamic community-driven platform for all baking enthusiasts. Several exciting enhancements are on the horizon:
+
+1. **User-Submitted Recipes**:
+   - While users can currently comment and like recipes, a major upcoming feature will allow users to submit their own pie recipes. This will allow the community to showcase their culinary talents and expand the site's recipe collection.
+
+2. **Favorites Feature**:
+   - Soon, users will have the ability to save their favorite recipes for easy access. A 'My Favorites' section will be incorporated into user profiles, providing a personalized recipe collection for each user.
+
+3. **Expansion to Other Desserts**:
+   - While ReciPie's current focus is pies, we aim to expand our repertoire to include a diverse range of desserts and baked goods such as cakes, tarts, pastries, and cookies. This will transform ReciPie into the ultimate hub for all dessert aficionados.
+
+4. **Advanced Search & Filters**:
+   - Enhance the user search experience by introducing advanced search capabilities. Users will soon be able to filter recipes by various criteria including ingredients, prep time, and dietary restrictions.
+
+5. **Interactive Tutorials**:
+   - Video tutorials and step-by-step interactive guides are in the pipeline for selected recipes. This will cater to users who are visual learners and provide additional support in the baking process.
+
+6. **Ingredient Shopping Lists**:
+   - A feature that enables users to auto-generate shopping lists directly from recipes. This will simplify the preparation phase for users, ensuring they have all the necessary ingredients before they start baking.
+
+7. **Integration with Smart Kitchen Appliances**:
+   - As the world of tech continually melds with the culinary arts, we're eyeing the possibility of allowing users to sync recipes with smart kitchen devices.
+
+8. **Seasonal and Festival Specials**:
+   - Regularly updating our content to reflect the season or upcoming festivals, such as "Winter Delights", "Thanksgiving Treats", or "Summer Fruit Bakes", will ensure ReciPie remains timely and relevant throughout the year.
+
+9. **Community Challenges & Events**:
+   - Hosting monthly baking challenges or themed events where users can participate, submit their creations, and win rewards. This will foster a strong sense of community and engagement.
+
+At ReciPie, we're committed to baking a better tomorrow, one feature at a time. We are always eager to hear from our community and welcome feedback and suggestions for new features and improvements.
+
+---
+
+## Social Media Integration 🌐
+
+Allowing for easy sharing with our `.link` design, and possibly expanding into other platforms with similar brand aesthetics, ensuring they complement our `.footer-bg` and associated footer styles.
+
+---
+
+## Testing Protocols 🧪
+
+- **UI Testing**: Checking the responsiveness of elements like `.masthead` across devices.
+- **Functionality Testing**: Interactions such as signing up with `.btn-signup` and liking with `.btn-like` should be intuitive and error-free.
+
+---
+
+## Deployment 🚀
+
+The Pie Central website has been developed using Gitpod, specifically from a template provided by Code Institute. The codebase for the site is hosted on GitHub, and the live site is deployed via Heroku. Below are the steps that outline the deployment process:
+
+### Setting up in Gitpod:
+
+1. **Starting with the Code Institute Template**:
+   - The project was initialized using a Gitpod template provided by Code Institute. This template sets up an environment with some necessary tools and extensions beneficial for development.
+
+2. **GitHub Repository Setup**:
+   - Within the Gitpod workspace, a new git repository was initiated using `git init`.
+   - This local repository was then linked to a corresponding GitHub repository.
+
+3. **Regular Commits**:
+   - During the development phase, regular commits were made to ensure a documented progression.
+   - These commits were pushed to the GitHub repository with the `git push` command.
+
+### Heroku Deployment:
+
+1. **Creation of Heroku App**: 
+   - A new Heroku app was established post-login.
+   - The deploy tab was navigated, and the GitHub account was connected, subsequently linking the Pie Central repository.
+
+2. **Configuring Environment Variables**: 
+   - The 'Config Vars' section was accessed under the settings tab of the Heroku app.
+   - Necessary environment variables were set here, ensuring sensitive information remains confidential and away from version control.
+
+3. **Enabling Automatic Deployment**:
+   - The deployment method set to GitHub can be found within the deploy tab.
+   - Automatic deployment was enabled for the master branch. This configuration ensures that each time a push is made to this branch on GitHub, Heroku automatically deploys the updates.
+
+### Local Execution:
+
+- For the purposes of local development and testing, the project was hosted in Gitpod.
+- Dependencies were managed using `pip install -r requirements.txt`.
+- The `heroku local` command enabled viewing of the app within a local environment.
+
+By using the Gitpod template from Code Institute, integrating Gitpod with GitHub, and then connecting GitHub to Heroku, a streamlined deployment process was maintained. This structure supports efficient development, testing, and live application updates.
+
