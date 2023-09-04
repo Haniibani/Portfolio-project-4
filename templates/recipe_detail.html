@@ -1,4 +1,4 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% block content %}
 
 {% load crispy_forms_tags %}
@@ -13,7 +13,9 @@
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
                 {% if "placeholder" in recipe.featured_image.url %}
-                <img class="masthead-featured-image" src="https://images.pexels.com/photos/2693447/pexels-photo-2693447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width="100%">
+                <img class="masthead-featured-image"
+                    src="https://images.pexels.com/photos/2693447/pexels-photo-2693447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    width="100%">
                 {% else %}
                 <img class="masthead-featured-image" src="{{ recipe.featured_image.url }}" width="100%">
                 {% endif %}
@@ -41,22 +43,23 @@
                     </div>
                 </div>
                 <div class="row">
-
                     <div class="col-1">
                         <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{% url 'recipe_like' recipe.slug %}" method="POST">
                                 {% csrf_token %}
                                 {% if liked %}
-                                <button type="submit" name="recipe_id" value="{{ recipe.slug }}" class="btn-like"><i class="fas fa-heart"></i></button>
+                                <button type="submit" name="recipe_id" value="{{ recipe.slug }}" class="btn-like"><i
+                                        class="fas fa-heart"></i></button>
                                 {% else %}
-                                <button type="submit" name="recipe_id" value="{{ recipe.slug }}" class="btn-like"><i class="far fa-heart"></i></button>
+                                <button type="submit" name="recipe_id" value="{{ recipe.slug }}" class="btn-like"><i
+                                        class="far fa-heart"></i></button>
                                 {% endif %}
                             </form>
                             {% else %}
                             <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
-                        <span class="text-secondary">{{ recipe.number_of_likes }} </span>
+                            <span class="text-secondary">{{ recipe.number_of_likes }} </span>
                         </strong>
                     </div>
                     <div class="col-1">
@@ -84,7 +87,11 @@
                     <strong>{{ comment.name }}</strong>
                     <span class="text-muted">
                         {{ comment.created_on }}
-                    </span> wrote:
+                    </span>
+                    {% if user.is_authenticated and user.username == comment.name %}
+                    <a href="{% url 'recipe_detail_edit_comment' recipe.slug comment.id %}"
+                        class="btn btn-sm btn-signup">Edit</a>
+                    {% endif %}
                 </p>
                 {{ comment.body | linebreaks}}
             </div>
@@ -92,20 +99,26 @@
         </div>
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
-
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
+                    Comment posted
                 </div>
                 {% else %}
-
                 {% if user.is_authenticated %}
-
-                <h3>Leave a comment:</h3>
+                <h3>
+                    {% if editing_comment %}
+                    Edit Comment:
+                    {% else %}
+                    Leave a comment:
+                    {% endif %}
+                </h3>
                 <p>Posting as: {{ user.username }}</p>
                 <form method="POST" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
+                    {% if editing_comment %}
+                    <input type="hidden" name="editing_comment_id" value="{{ editing_comment.id }}">
+                    {% endif %}
                     <button type="submit" class="btn btn-signup btn-lg" style="margin-top: 0.8em;">Submit</button>
                 </form>
                 {% endif %}

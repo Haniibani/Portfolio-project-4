@@ -43,10 +43,4 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ("name", "body", "created_on", "approved")
     list_filter = ("approved", "created_on")
     search_fields = ("name", "email", "body")
-    actions = ["approved_comments"]
 
-    def approved_comments(self, request, queryset):
-        """
-        Action to bulk-approve selected comments.
-        """
-        queryset.update(approved=True)

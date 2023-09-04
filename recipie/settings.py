@@ -10,8 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
-import dj_database_url
+import sys
 from pathlib import Path
+import dj_database_url
 
 if os.path.isfile("env.py"):
     import env
@@ -31,7 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "8000-haniibani-portfolioproj-cc5p2x2hulo.ws-eu102.gitpod.io",
+    "8000-haniibani-portfolioproj-9xk1ej4mpmf.ws-eu104.gitpod.io",
     "hannas-recipie-e418bd744fab.herokuapp.com",
     "localhost",
 ]
@@ -107,8 +108,6 @@ WSGI_APPLICATION = "recipie.wsgi.application"
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
 # }
-
-import sys
 
 if "test" in sys.argv:
     DATABASES = {
