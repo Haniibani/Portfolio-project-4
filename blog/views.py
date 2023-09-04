@@ -50,7 +50,14 @@ class RecipeDetail(View):
         if recipe.likes.filter(id=self.request.user.id).exists():
             liked = True
 
-        if "editing_comment_id" in request.POST:
+        if "delete_comment_id" in request.POST:
+            comment_id = request.POST.get("delete_comment_id")
+            comment_to_delete = get_object_or_404(Comment, id=comment_id)
+            if comment_to_delete.name == request.user.username:
+                comment_to_delete.delete()
+                return HttpResponseRedirect(reverse("recipe_detail", args=[slug]))
+
+        elif "editing_comment_id" in request.POST:
             comment_id = request.POST.get("editing_comment_id")
             comment_to_edit = get_object_or_404(Comment, id=comment_id)
             comment_form = CommentForm(request.POST, instance=comment_to_edit)
@@ -60,6 +67,7 @@ class RecipeDetail(View):
             ):
                 comment_form.save()
                 return HttpResponseRedirect(reverse("recipe_detail", args=[slug]))
+
         else:
             comment_form = CommentForm(data=request.POST)
             if comment_form.is_valid():
@@ -89,3 +97,11 @@ class RecipeLike(View):
         else:
             recipe.likes.add(request.user)
         return HttpResponseRedirect(reverse("recipe_detail", args=[slug]))
+
+
+def recipe_detail_delete_comment(request, slug, comment_id):
+    if request.method == "POST":
+        comment = Comment.objects.get(id=comment_id)
+        if comment.name == request.user.username:
+            comment.delete()
+            return HttpResponseRedirect(reverse("recipe_detail", args=[slug]))

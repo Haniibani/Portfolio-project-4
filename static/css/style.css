@@ -3,7 +3,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    
+
 }
 
 main {
@@ -117,8 +117,8 @@ main {
     top: 0;
     left: 0;
     height: 100%;
-    width: 30%; 
-    background: linear-gradient(to right, #5c4461, transparent); 
+    width: 30%;
+    background: linear-gradient(to right, #5c4461, transparent);
 }
 
 .post-link {
@@ -188,7 +188,9 @@ main {
     flex-direction: row;
     justify-content: space-between;
 }
-.instructions, .ingredients {
+
+.instructions,
+.ingredients {
     flex: 1;
     padding: 0 10px;
 }
@@ -202,6 +204,16 @@ main {
 .icons {
     font-size: 40px;
     margin-bottom: 0;
+}
+
+.btn-success:hover {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-danger:hover {
+    background-color: #e24b5a;
+    border-color: #dc3545;
 }
 
 .footer-bg {
