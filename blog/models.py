@@ -1,7 +1,10 @@
+"""
+This module defines the data models for the blog application.
+"""
+
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-
 
 STATUS = ((0, "Draft"), (1, "Published"))
 GLUTENFREE = "Glutenfree"
@@ -19,6 +22,9 @@ TAGS = [
 
 
 class Recipe(models.Model):
+    """
+    Represents a recipe with ingredients, an image, and related comments.
+    """
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     tag = models.CharField(max_length=100, choices=TAGS, default=NORMAL)
@@ -43,10 +49,16 @@ class Recipe(models.Model):
         return f"{self.title} - {' | '.join(ingredients_list)}"
 
     def number_of_likes(self):
-        return self.likes.count() if self.likes else 0
+        """
+        Return the count of likes for this recipe.
+        """
+        return self.likes.count()
 
 
 class Ingredient(models.Model):
+    """
+    Represents an ingredient which is associated with a specific recipe.
+    """
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE)
     ingredient = models.CharField(max_length=200)
     unit = models.CharField(max_length=200)
@@ -57,6 +69,9 @@ class Ingredient(models.Model):
 
 
 class Comment(models.Model):
+    """
+    Represents a comment made on a specific recipe.
+    """
     recipe = models.ForeignKey(
         Recipe, on_delete=models.CASCADE, related_name="comments"
     )

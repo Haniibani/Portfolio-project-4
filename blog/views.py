@@ -55,7 +55,9 @@ class RecipeDetail(View):
             comment_to_delete = get_object_or_404(Comment, id=comment_id)
             if comment_to_delete.name == request.user.username:
                 comment_to_delete.delete()
-                return HttpResponseRedirect(reverse("recipe_detail", args=[slug]))
+                return HttpResponseRedirect(
+                    reverse("recipe_detail", args=[slug])
+                )
 
         elif "editing_comment_id" in request.POST:
             comment_id = request.POST.get("editing_comment_id")
@@ -66,7 +68,9 @@ class RecipeDetail(View):
                 and comment_to_edit.name == request.user.username
             ):
                 comment_form.save()
-                return HttpResponseRedirect(reverse("recipe_detail", args=[slug]))
+                return HttpResponseRedirect(
+                    reverse("recipe_detail", args=[slug])
+                )
 
         else:
             comment_form = CommentForm(data=request.POST)
