@@ -1,170 +1,175 @@
-# Recipie 🥧
+# ReciPie 🥧
 
-## Introduction 📜
+![Am I Responsive](static/Images/AmIResponsive.PNG)
 
-Welcome to **Recipie**! Dive deep into a world exclusively crafted for pie enthusiasts, where every recipe, filling, crust, and comment is dressed in the most refined and user-friendly designs. With colors emanating warmth and typography exuding sophistication, we've ensured that our pie universe is baked to perfection!
+## Introduction
+
+Welcome to **ReciPie**! Explore our exclusive pie universe, catering to pie enthusiasts. Dive into a world of refined designs, recipes, and interactions. Experience warmth through our color palette and sophistication through our typography. It's pie perfection!
 
 [View the live website on Heroku](https://hannas-recipie-e418bd744fab.herokuapp.com/)
 
-Please note: To open any links in this document in a new browser tab, please press CTRL + Click.
+> **Note**: To open links in a new browser tab, press CTRL + Click.
 
 ---
 
-## Table of Contents 📖
-[Recipie](#Recipie)
- * [Introduction](#introduction-)
- * [UX](#ux-)
-   + [Overall Goals](#overall-goals)
-   + [The Strategy Plane](#the-strategy-plane)
-   + [The Site's Ideal User](#the-sites-ideal-user)
-   + [Site Goals](#site-goals)
-* [Strategy, Epics & User Stories](#strategy-epics-and-user-stories)
-   + [Strategy](#strategy)
-   + [Epics and User Stories](#epics-and-user-stories)
-   + [The Scope Plane](#the-scope-plane)
-   + [The Structure plane](#the-structure-plane)
-   + [The Skeleton Plane](#the-skeleton-plane)
-      + [Wireframe mock-ups](#wireframe-mock-ups)
-   + [The Surface Plane](#the-surface-plane)
-      + [Design](#design)
-      + [Typography](#typography)
-      + [Images](#images)
-* [Features](#features-🛠️)
-   + [Interactive Imagery](#interactive-imagery)
-   + [Engaging Buttons](#engaging-buttons)
-* [Future Enhancements](#future-enhancements-🚀)
-* [Social Media Integration](#social-media-integration-🌐)
-* [Testing Protocols](#testing-protocols-🧪)
-* [Deployment Guidelines](#deployment-guidelines-🚀)
+## Table of Contents
+
+* [ReciPie](#Recipie)
+  * [Introduction](#introduction-)
+  * [UX](#ux-)
+    * [Overall Goals](#overall-goals)
+    * [Strategy Plane](#strategy-plane)
+    * [Site's Ideal User](#sites-ideal-user)
+    * [Site Goals](#site-goals)
+  * [Strategy, Epics & User Stories](#strategy-epics-and-user-stories)
+    * [Strategy](#strategy)
+    * [Epics and User Stories](#epics-and-user-stories)
+    * [Scope Plane](#scope-plane)
+    * [Structure Plane](#structure-plane)
+    * [Skeleton Plane](#skeleton-plane)
+      * [Wireframe Mock-ups](#wireframe-mock-ups)
+    * [Surface Plane](#surface-plane)
+      * [Design](#design)
+      * [Typography](#typography)
+      * [Images](#images)
+  * [Features](#features-🛠️)
+    * [Interactive Imagery](#interactive-imagery)
+    * [Engaging Buttons](#engaging-buttons)
+  * [Future Enhancements](#future-enhancements)
+  * [Social Media Integration](#social-media-integration)
+  * [Testing Protocols](#testing-protocols)
+  * [Deployment Guidelines](#deployment-guidelines)
 
 ---
 
-## UX 🖥️
+## UX
 
 ### Overall Goals
 
-- To create a centralized platform exclusively for pie recipes, catering to baking enthusiasts worldwide.
-- To foster a community-driven approach where users can register, comment, and like existing recipes.
-- To provide recipe authors acknowledgment through author highlights and recognition systems.
-- To create an intuitive and visually appealing user interface, ensuring a seamless recipe discovery experience.
+- Craft a dedicated platform for pie recipes to serve baking enthusiasts globally.
+- Promote a community approach where users register, comment, like, and acknowledge recipe authors.
+- Deliver an intuitive and engaging user interface for a flawless recipe exploration.
 
----
+### Strategy Plane
 
-### The Strategy Plane
-
-ReciPie serves as a dedicated platform for pie enthusiasts, both amateur bakers and professionals. For the user, it's an avenue to discover, appreciate, and interact with an array of pie recipes, leave feedback, and mark their favorites. As for recipe authors, it provides them with a platform to showcase their culinary skills and receive direct feedback from the community. The overall design and user experience have been meticulously crafted, ensuring that visitors find it both captivating and user-friendly. 
-
----
+Recipie is a haven for pie enthusiasts, be they amateurs or professionals. Users can discover, engage with, and appreciate a myriad of pie recipes. For authors, it's a stage for culinary display and community feedback. We've focused on a captivating and user-friendly design.
 
 ### The Site's Ideal User
 
-- Baking hobbyists eager to try out new pie recipes.
-- Professional bakers or culinary students looking for inspiration or innovative takes on classic pies.
-- Users wanting to share their cherished family pie recipes with a broader audience.
-- Visitors interested in providing feedback, sharing their baking experiences, or simply liking their favorite pie recipes.
-
----
+- Hobbyist bakers exploring new pie recipes.
+- Professional bakers or culinary students seeking innovation.
+- Individuals sharing cherished family pie recipes.
+- Visitors providing feedback, sharing experiences, or liking favorite recipes.
 
 ### Site Goals
 
-- To establish ReciPie as the go-to platform for discovering and sharing pie recipes.
-- To nurture a vibrant community where bakers can exchange tips, feedback, and innovations.
-- To promote user interactivity through features like comments, likes, and future provisions for recipe submissions.
-- To gradually expand the recipe catalog, branching into broader dessert and baking categories, solidifying ReciPie's place in the culinary online world.
+- Position Recipie as the premier platform for pie recipe discovery and sharing.
+- Cultivate a thriving community of bakers exchanging ideas and feedback.
+- Enhance user engagement with comments, likes, and potential recipe submissions.
+- Expand our recipe range to establish ReciPie's dominance in the online culinary world.
 
----
-
-## Strategy, Epics and User Stories
+## Strategy, Epics, and User Stories
 
 ### Strategy
 
-ReciPie aims to be the go-to platform for pie enthusiasts everywhere. A space where users can not only view delicious pie recipes but also interact by commenting and liking. As the site grows, the vision is to allow users to upload their own recipes, expanding beyond pies to encompass a broader range of desserts and baked goods.
+Recipie aims to be the go-to platform for pie enthusiasts everywhere. A space where users can view delicious pie recipes and interact by commenting and liking. As the site grows, the vision is to allow users to upload their own recipes, expanding beyond pies to include a broader range of desserts and baked goods.
 
 ---
 
 ### Epics and User Stories Table
 
-| Type  | Name                                      | Description                                                                                                                                                                 |
-|-------|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Epic**     | Model development                    | As a developer, I want to design and implement a comprehensive and intuitive recipe model in the database.                                                                  |
-| **Epic**     | Model management endpoints development | As a developer, I want to provide endpoints for CRUD operations on recipes.                                                                                                 |
-| **Epic**     | View & Interact                      | As a User, I can view recipes and interact with the content.                                                                                                                |
-| **User Story** | View a Recipe                       | As a Site User, I can click on a recipe to read the full text.                                                                                                              |
-| **User Story** | Approve comments                    | As a Site Admin, I can approve or disapprove comments to filter out objectionable content.                                                                                   |
-| **User Story** | View rating                         | Both Site Users and Admins can view the rating on each recipe to gauge popularity.                                                                                          |
-| **User Story** | List recipes                        | As a Site Admin, I can list recipes from the database.                                                                                                                      |
-| **User Story** | Account registration                | As a Site User, I can register an account to comment and like.                                                                                                              |
-| **User Story** | View comments                       | Both Site Users and Admins can view comments on a post to engage in the conversation.                                                                                       |
-| **User Story** | Get comment                         | As a Site Admin, I can retrieve a specific comment.                                                                                                                         |
-| **User Story** | List comments                       | As a Site Admin, I can list all comments.                                                                                                                                   |
-| **User Story** | Get recipe                          | As a Site Admin, I can retrieve a specific recipe from the database.                                                                                                        |
-| **User Story** | Update recipe                       | As a Site Admin, I can update specific recipes in the database.                                                                                                             |
-| **User Story** | Create recipe                       | As a Site Admin, I can add new recipes to the database.                                                                                                                     |
-| **User Story** | Delete recipe                       | As a Site Admin, I can remove recipes from the database.                                                                                                                    |
-| **User Story** | Create comment model                | As a developer, I want to design a comment model with fields like author, content, and creation date.                                                                       |
-| **User Story** | Create a recipe model               | As a developer, I aim to design a Recipe model with fields such as title, description, ingredients, and more.                                                               |
-| **User Story** | View recipes                        | As a Site User, I can browse through a list of recipes.                                                                                                                     |
-| **User Story** | Like/unlike a recipe                | As a Site User, I can rate a recipe to express my appreciation or criticism.                                                                                                |
+| Type          | Name                                        | Description                                                                                                                                      |
+|---------------|---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| Epic          | Model Development                           | As a developer, I want to design and implement a comprehensive and intuitive recipe model in the database.                                         |
+| Epic          | Model Management Endpoints Development      | As a developer, I want to provide endpoints for CRUD operations on recipes.                                                                       |
+| Epic          | View & Interact                             | As a user, I can view recipes and interact with the content.                                                                                      |
+| User Story    | View a Recipe                               | As a site user, I can click on a recipe to read the full text.                                                                                    |
+| User Story    | Approve Comments                            | As a site admin, I can approve or disapprove comments to filter out objectionable content.                                                         |
+| User Story    | View Rating                                 | Both site users and admins can view the rating on each recipe to gauge popularity.                                                               |
+| User Story    | List Recipes                                | As a site admin, I can list recipes from the database.                                                                                            |
+| User Story    | Account Registration                        | As a site user, I can register an account to comment and like.                                                                                    |
+| User Story    | View Comments                               | Both site users and admins can view comments on a post to engage in the conversation.                                                            |
+| User Story    | Get Comment                                 | As a site admin, I can retrieve a specific comment.                                                                                               |
+| User Story    | List Comments                               | As a site admin, I can list all comments.                                                                                                         |
+| User Story    | Get Recipe                                  | As a site admin, I can retrieve a specific recipe from the database.                                                                              |
+| User Story    | Update Recipe                               | As a site admin, I can update specific recipes in the database.                                                                                   |
+| User Story    | Create Recipe                               | As a site admin, I can add new recipes to the database.                                                                                           |
+| User Story    | Delete Recipe                               | As a site admin, I can remove recipes from the database.                                                                                          |
+| User Story    | Create Comment Model                        | As a developer, I want to design a comment model with fields like author, content, and creation date.                                              |
+| User Story    | Create a Recipe Model                       | As a developer, I aim to design a recipe model with fields such as title, description, ingredients, and more.                                     |
+| User Story    | View Recipes                                | As a site user, I can browse through a list of recipes.                                                                                           |
+| User Story    | Like/Unlike a Recipe                        | As a site user, I can rate a recipe to express my appreciation or criticism.                                                                      |
 
-By addressing these epics and user stories, ReciPie aims to offer an engaging and interactive experience to users while ensuring robust backend functionality for administrators and developers.
+By addressing these epics and user stories, Recipie aims to offer an engaging and interactive experience to users while ensuring robust backend functionality for administrators and developers.
 
 ---
 
 ### The Scope Plane
 
-<br>
-
 #### Opportunities
-Arising from user stories
-| Opportunities | Importance | Viability / Feasibility
-| ------ | :------: | :------: |
-| **Allow users to save their favorite recipes** | 5 | 5 |
-| **Enable users to edit their profile** | 5 | 5 |
-| **Allow users to delete their profile** | 5 | 5 |
-| **Allow users to view recipe author profiles** | 4 | 5 |
-| **Provide users the ability to access the site on any device** | 5 | 5 |
-| **Enable users to post their own recipes** | 5 | 4 |
-| **Allow site admins to highlight top-rated or featured recipes** | 4 | 5 |
+
+Arising from user stories:
+| Opportunities                                  | Importance | Viability / Feasibility |
+|------------------------------------------------|:----------:|:-----------------------:|
+| Allow users to save their favorite recipes     |     5      |            5            |
+| Enable users to edit their profile             |     5      |            5            |
+| Allow users to delete their profile            |     5      |            5            |
+| Allow users to view recipe author profiles     |     4      |            5            |
+| Provide users the ability to access the site on any device | 5 | 5 |
+| Enable users to post their own recipes         |     5      |            4            |
+| Allow site admins to highlight top-rated or featured recipes | 4 | 5 |
 
 **Features currently implemented:**
-* User Profile - Create an account and log in/out
-* Comment on Recipes - Users can already post comments
-* Recipe Likes - Ability to like and unlike recipes
-* View Detailed Recipe Information - Detailed views of individual recipes
+- User Profile - Create an account and log in/out
+- Comment on Recipes - Users can post comments
+- Recipe Likes - Like and unlike recipes
+- View Detailed Recipe Information
 
 **Features planned:**
-* User Profile - Edit and Delete
-* Favorite Recipes - Save, View, and Remove
-* Users can post their own recipes
-* Contact Form - Ability for all users to contact the website administrators or recipe authors.
-* Responsive Design - Ensuring the site remains fully responsive to cater to a variety of devices users may access it from.
-
+- User Profile - Edit and Delete
+- Favorite Recipes - Save, View, and Remove
+- Users can post their own recipes
+- Contact Form
+- Responsive Design
 
 ---
 
 ### The Structure Plane
 
-ReciPie is designed with the end user's experience at its core. The platform aims to be intuitive and user-friendly, allowing visitors to effortlessly navigate through a rich repository of recipes. These are the defining aspects:
+Recipie follows a user-centric design approach that prioritizes intuitive usability and seamless navigation. Key elements contributing to this user-centric structure include:
 
-- **Organization and Hierarchy**: The site is structured to prioritize easy access to recipes. Recipes are categorized logically, allowing users to browse or dive straight into their desired cuisine or dish type.
+- **Organization and Hierarchy**: The platform maintains a clear organizational structure, ensuring that users can easily navigate and find the recipes they're interested in. A well-defined hierarchy aids in presenting information in a logical and user-friendly manner.
 
-- **Visual Appeal**: Incorporating elements like `.image-flash-likes` ensures that the most popular recipes get the spotlight they deserve. Through this dynamic visualization, recipes that garner more attention and likes from the community are immediately noticeable.
+- **Visual Appeal with `.image-flash-likes`**: Visual elements like the `.image-flash-likes` component enhance the visual appeal of the platform. This element is strategically positioned to draw attention to recipe images and user interactions, thereby improving the overall engagement.
 
-- **Feature Highlights**: Our `.masthead-featured-image` is strategically placed to spotlight the star recipes. This might be a dish that's currently trending, a seasonal favorite, or a timeless classic that's a must-try.
+- **Feature Highlights using `.masthead-featured-image`**: The `.masthead-featured-image` component is strategically utilized to highlight key features, recipes, or content. This not only provides visual interest but also offers a dynamic way to showcase important aspects of the platform.
 
-- **Interactivity**: While the platform focuses on the visual appeal and structured presentation of the recipes, it also integrates interactivity. Users are encouraged to engage with content, be it through liking a recipe or diving deep into the ingredient list and instructions.
+- **Interactivity**: Recipie places a strong emphasis on interactivity, ensuring that users can actively engage with the platform. This includes features like liking recipes, navigating through different sections, and exploring content. Interactivity enhances user engagement and makes the platform more dynamic and enjoyable to use.
 
-By blending organization with captivating visuals and dynamic elements, ReciPie offers an immersive culinary journey for every visitor.
+The user-centric design approach of Recipie ensures that users can easily navigate, explore, and engage with the platform's content, creating a positive and engaging experience for all users.
 
 ---
 
 ### The Skeleton Plane
 
-#### Wireframe mock-ups
+#### Wireframe Mock-ups
 
-Wireframes were produced for most pages, excluding those primarily containing forms, like the add product page. A comprehensive PDF with all wireframes is available [here](/static/docs/wireframes.pdf).
+Wireframes play a critical role in the initial phases of web development. They provide a visual representation of the structural layout, helping to clarify user flow and page designs before any coding begins.
 
-Detailed attention was directed towards universal elements on each page, notably the header and the footer. The header incorporates multiple layers of navigation, ensuring users can quickly access account information while being distinct from primary navigation. For mobile and tablet, a horizontal bar in the main menu differentiates these, while on desktop the account-related navigation is positioned above the main site links.
+For this project, wireframes were meticulously crafted for several pages, capturing the essence of the user interface while emphasizing global elements such as the header and footer. The multi-layered navigation in the header distinctly separates account information from primary site navigation, ensuring an intuitive and user-friendly experience.
+
+Below are some of the wireframes created for the project:
+
+- **Home Page**:
+  ![Home Page Wireframe](static/Images/WireframeHome.png)
+
+- **Sign-In Page**:
+  ![Sign-In Page Wireframe](static/Images/WireframeSignIn.png)
+
+- **Post Detail Page**:
+  ![Post Detail Page Wireframe](static/Images/WireframePostdetail.png)
+
+Though not every single page was wireframed—particularly those dominated by forms—the majority were planned out to ensure a cohesive design strategy.
 
 ---
 
@@ -172,78 +177,85 @@ Detailed attention was directed towards universal elements on each page, notably
 
 ### Design
 
-Once I was happy with the overall structure of the site, and the layout of the wireframes, I selected a colour scheme based on a desire for a simple and clean aesthetic. The site incorporates two main colours, blue and white, although specific shades were selected for various different areas, they all remained within the blue family. Blue was chosen due to the fictional business base location and the county colours are blue and white. The white or off white shades are tinted with a little blue to maintain consistency. The colour scheme was referenced using the [contrast grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23000000%2C%20Black%0D%0A%2303045E%2C%20Primary%0D%0A%23f2f4f8%2C%20Primary-text%0D%0A%23c7ccdb%2C%20Secondary%0D%0A%23f7c59f%2C%20Accent%0D%0A%2370ae6e%2C%20Success%0D%0A%23ef626c%2C%20Error%0D%0A%231188a0%2C%20Info%0D%0A%23f3c178%2C%20Warning) which provides a grid of colour contrasts to ensure only those which would easily pass the AAA standard were selected to maximise accessibility for users.
+The foundation of the site's design began with establishing the overall structure and wireframe layout. Once the skeletal structure was defined, focus shifted towards enhancing the aesthetic through careful choice of colors and typography. Below is a detailed breakdown of the site's design:
 
-![Colour Contrast Grid](/static/docs/img/contrast-grid.png)
+**Colors**:
+- The primary color palette leans heavily on shades of purple. Specifically, `#361a3a` is a dominant tone used for brand emphasis, while `#5c4461` and `#6a4f6f` are used to provide depth and contrast in various sections.
+- An accent color of `#e84610` (a vibrant shade of red-orange) is introduced to draw attention and provide interactive feedback.
+- A consistent background color of `#f9fafc` is used to maintain a clean and streamlined design. For sections requiring more emphasis or contrast, `#fff` (white) and `#445261` (dark blue-gray) are employed.
+- Interactive elements often transition to a shade of `#9b6fa3` on hover, ensuring user feedback.
+
+**Typography**:
+- The website primarily uses the Lato font, known for its clarity and versatility. This ensures readability across different sections.
+- A distinction in font weight, oscillating between `300` (thin) and `700` (bold), offers a balance between content hierarchy and aesthetics.
+
+**Responsive Design**:
+- Flexbox is heavily used to ensure elements are arranged logically and responsively across various viewport sizes.
+- Media queries further refine the design for different device sizes, ensuring the website is mobile-friendly and provides an optimal experience across devices.
+
+**Branding**:
+- The `.brand` class and its variants are reserved for site branding. They sport the primary purple (`#361a3a`) and are strategically placed with defined font sizes and weights.
+
+**Interactive Elements**:
+- Buttons, links, and certain interactive components are designed to change color upon hover or active states, providing clear feedback to users.
+- Specifically, buttons like `.btn-signup` offer a color switch between background and text on interaction, providing a pleasant yet noticeable feedback.
+
+**Structure & Layout**:
+- The design follows a flexbox model, ensuring content flows logically and adjusts appropriately across devices.
+- Containers such as `.masthead` have been employed for featured content, with intricate designs like gradient overlays for depth.
+- The footer is designed with a distinct dark-purple background (`#5c4461`) to differentiate it from the main content and house links/icons with white color, which transitions to a lighter purple on hover.
+
+The design choices reflect the site's commitment to providing an engaging, user-friendly experience while aligning with the fictional business's branding based on the blue and white county colors. The meticulous design approach ensures not only a visually appealing site but also one that is functional and intuitive.
 
 ### Typography 
 
-Three different fonts were utilised for the site. The main heading font of Orbitron and the smaller subheading font of Economica were selected for their futuristic almost technical feeling whilst Montserrat was chosen as a complimentary font which allowed users the ability to read the text easily and clearly.
+Three fonts were used for the site. The primary heading font, Orbitron, and the subheading font, Economica, were chosen for their futuristic, technical feel. Montserrat was selected as a complementary font to ensure clear and easy readability.
 
 #### Images
 
-Background images were acquired from free image sites [Pexels](https://www.pexels.com/) and [Unsplash](https://unsplash.com/), product photos were found on manufacturer media pages.
+Pie images were sourced from [Pexels](https://www.pexels.com/).
 
 ---
 
-## Features 🛠️
+## Features
 
-### Interactive Imagery 🖼️
-At ReciPie, visual appeal meets interactivity, making browsing pie recipes a delightful experience:
+### Interactive Imagery
 
-- **Title Hover Effect**: Every pie recipe comes with its unique story. As users navigate the site, hovering over the title of each recipe reveals an engaging effect, thanks to the `.image-flash` design. This slight animation not only piques curiosity but also provides a hint of the artistry and details baked into every pie.
+At ReciPie, visuals combine with interactivity, enhancing the experience of browsing pie recipes:
 
-- **Like Counter Hover Effect**: Gauging a pie's popularity has never been this fun! As users move their cursors over the like counter, they witness an alluring hover effect. This dynamic interaction, enabled by the `.image-flash-likes` styling, makes appreciating and liking each recipe a captivating affair.
+- **Title Hover Effect**: Hovering over each recipe title reveals a unique animation via the `.image-flash` design.
+- **Like Counter Hover Effect**: An enticing hover effect surfaces when users hover over the like counter, achieved through the `.image-flash-likes` styling.
 
----
+### Engaging Buttons
 
-### Engaging Buttons 🔘
-Buttons on ReciPie are not just about actions; they play a crucial role in driving user engagement:
+Buttons at Recipie are designed not just for functionality but also for user engagement:
 
-- **Sign-up Button**: Presented with the `.btn-signup` class, this button warmly welcomes potential members to be a part of the ReciPie community. The interactive hover design subtly hints at the exciting baking adventures awaiting them upon joining.
-
-- **Like Button**: Showcasing a pie's magnificence is a click away. The `.btn-like` button allows users to pour their love for a recipe effortlessly. The hover feedback makes sure that every 'like' feels personal and interactive.
+- **Sign-up Button**: With the `.btn-signup` class, this button invites users to join the Recipie community. Its hover effect hints at the baking adventures awaiting new members.
+- **Like Button**: The `.btn-like` button lets users express admiration for a recipe. The hover effect ensures each interaction feels personalized.
 
 ---
 
-## Future Enhancements 📅
+## Future Enhancements
 
-ReciPie's ambition is not just to remain a static pie repository but to evolve into a dynamic community-driven platform for all baking enthusiasts. Several exciting enhancements are on the horizon:
+Recipie is envisioned as a dynamic, community-driven platform for all baking enthusiasts. Several exciting features are in the pipeline:
 
-1. **User-Submitted Recipes**:
-   - While users can currently comment and like recipes, a major upcoming feature will allow users to submit their own pie recipes. This will allow the community to showcase their culinary talents and expand the site's recipe collection.
+1. **User-Submitted Recipes**: Users will soon be able to submit their pie recipes, expanding the site's offerings.
+2. **Favorites Feature**: Users will soon have the ability to save and access favorite recipes from their profiles.
+3. **Expansion to Other Desserts**: The platform will extend its scope beyond pies to feature diverse desserts and baked goods.
+4. **Advanced Search & Filters**: Enhanced search functionalities will allow users to filter recipes based on specific criteria.
+5. **Interactive Tutorials**: Video tutorials and step-by-step guides are planned for select recipes.
+6. **Ingredient Shopping Lists**: Users will be able to auto-generate shopping lists from recipes.
+7. **Integration with Smart Kitchen Appliances**: The platform is exploring possibilities to sync recipes with smart kitchen devices.
+8. **Seasonal and Festival Specials**: Regular content updates will ensure Recipie remains timely and relevant.
+9. **Community Challenges & Events**: Monthly baking challenges and themed events will encourage user participation and community building.
 
-2. **Favorites Feature**:
-   - Soon, users will have the ability to save their favorite recipes for easy access. A 'My Favorites' section will be incorporated into user profiles, providing a personalized recipe collection for each user.
-
-3. **Expansion to Other Desserts**:
-   - While ReciPie's current focus is pies, we aim to expand our repertoire to include a diverse range of desserts and baked goods such as cakes, tarts, pastries, and cookies. This will transform ReciPie into the ultimate hub for all dessert aficionados.
-
-4. **Advanced Search & Filters**:
-   - Enhance the user search experience by introducing advanced search capabilities. Users will soon be able to filter recipes by various criteria including ingredients, prep time, and dietary restrictions.
-
-5. **Interactive Tutorials**:
-   - Video tutorials and step-by-step interactive guides are in the pipeline for selected recipes. This will cater to users who are visual learners and provide additional support in the baking process.
-
-6. **Ingredient Shopping Lists**:
-   - A feature that enables users to auto-generate shopping lists directly from recipes. This will simplify the preparation phase for users, ensuring they have all the necessary ingredients before they start baking.
-
-7. **Integration with Smart Kitchen Appliances**:
-   - As the world of tech continually melds with the culinary arts, we're eyeing the possibility of allowing users to sync recipes with smart kitchen devices.
-
-8. **Seasonal and Festival Specials**:
-   - Regularly updating our content to reflect the season or upcoming festivals, such as "Winter Delights", "Thanksgiving Treats", or "Summer Fruit Bakes", will ensure ReciPie remains timely and relevant throughout the year.
-
-9. **Community Challenges & Events**:
-   - Hosting monthly baking challenges or themed events where users can participate, submit their creations, and win rewards. This will foster a strong sense of community and engagement.
-
-At ReciPie, we're committed to baking a better tomorrow, one feature at a time. We are always eager to hear from our community and welcome feedback and suggestions for new features and improvements.
+At ReciPie, the mission is to continually enhance the platform, and feedback from the community is always welcome.
 
 ---
 
-## Social Media Integration 🌐
+## Social Media Integration
 
-Allowing for easy sharing with our `.link` design, and possibly expanding into other platforms with similar brand aesthetics, ensuring they complement our `.footer-bg` and associated footer styles.
+Integration with popular social media platforms is made easier with our `.link` design. We're also considering expansion to other platforms, ensuring they align well with our `.footer-bg` and other associated footer styles.
 
 ---
 
@@ -251,131 +263,122 @@ Allowing for easy sharing with our `.link` design, and possibly expanding into o
 
 ### Testing Strategy
 
-I utilised both automated and manual testing strategies during the development of the site. For a comprehensive breakdown of the testing methodologies and procedures, refer to the [testing.md file](TESTING.md).
-
-In addition to the functionality testing of the site and the code testing, User Story tests were conducted to ensure that the acceptance criteria of the previously listed user stories were fulfilled. The commit that addressed the functionality requirements for each user story can be found in the issues section of the repository. It was applied to every issue before it was closed and marked as completed.
+The development of the site involved both automated and manual testing strategies. A detailed breakdown of these testing methods is available in the [testing.md file](TESTING.md). Along with functional and code testing, User Story tests were conducted to validate that the user stories' acceptance criteria were met. The related commits for each user story can be located in the repository's issues section.
 
 #### Testing Overview
 
-Testing was categorized into distinct sections, ensuring individual testing with developed test cases for each segment.
+Testing was organized into distinct sections, with individual test cases developed for each area. 
 
-[View the Testing Schedule Overview](/static/docs/testing-schedule.pdf)
-
-For an in-depth analysis of the testing procedures and methods, consult the [testing.md file](TESTING.md).
+For a deeper dive into the testing methods, refer to the [TESTING.md file](TESTING.md).
 
 #### Validator Testing
 
-Every code file underwent validation using the appropriate validators for their specific language. Complete details are available in the testing.md file. All code passed validation. However, some issues arose from code produced by third parties:
-- Django's built-in code in the settings file led to five line length errors.
-- Bootstrap code yielded 260 warnings during CSS validation.
-- Fontawesome CDN resulted in 6 HTML validation errors concerning CSS variables within the CDN CSS code.
+Every code file was validated using the respective validators based on their language. Full details can be found in the testing.md file. Notably, some issues emerged from third-party code:
+
+- Django's in-built code in the settings file resulted in five line length errors.
+- Bootstrap produced 260 warnings during CSS validation.
+- Fontawesome CDN led to 6 HTML validation errors related to CSS variables in the CDN's CSS.
 
 #### Automated Testing
 
-Automated tests have been meticulously constructed for the Django-based blog application to ensure its robustness and reliability. These tests cover a spectrum of functionalities, including model integrity, view behaviors, and URL routing.
+Automated tests were diligently crafted for the Django-based blog application, ensuring its reliability. 
 
-**Models Testing**:
-- **Recipe Model**: Tests have been designed to verify the default ordering of recipe instances, the uniqueness of the 'slug' field, and the functionality of the `number_of_likes` method.
-- **Ingredient Model**: Two sets of tests were written to ensure the correct string representation of the Ingredient model.
-- **Comment Model**: Tests have been composed to verify the string representation and default ordering of comments.
+- **Models Testing**:
+  - Recipe Model
+  - Ingredient Model
+  - Comment Model
+  
+- **Views Testing**:
+  - RecipeListView
+  - RecipeDetailView
+  - RecipeLikeView
 
-**Views Testing**:
-- **RecipeListView**: Verifies the URL's existence at the desired location, accessibility through its name, and the correct template usage.
-- **RecipeDetailView**: Ensures the detail view URL is correctly positioned, can be accessed via its name, and uses the appropriate template.
-- **RecipeLikeView**: A test confirms the functionality of the "like" feature by simulating a user liking a recipe and ensuring the proper redirection.
+- **URLs Testing**: 
+Proper URL resolution was ensured for each view, promoting smooth navigation.
 
-**URLs Testing**:
-Tests have been carried out to ensure that the URLs correctly resolve for the respective views, providing a seamless navigation experience.
+To execute these extensive tests, clone the repository. The project's settings connect to the designated database if a database URL is available in the config variables. For safe testing, exclude the database URL in the config variables. This will prompt Django to run tests on a SQLite3 test database, which protects your primary PostgreSQL database.
 
-To run these comprehensive tests, one would need to clone the repository. It's crucial to note that the project settings have been configured to connect to the designated database if a database URL is found in the config variables. For a safe testing environment, omit the database URL in the config variables; this will prompt Django to run the tests on a SQLite3 test database, thereby safeguarding your primary PostgreSQL database (especially relevant if hosted on platforms like Heroku).
+![Automated testing results](static/Images/AutomatedTest.PNG)
 
-![Automated testing results](/static/docs/img/features/tests.png)
+## Lighthouse Testing
 
-By leveraging this expansive suite of 45 tests, potential issues can be preemptively identified and addressed, underscoring a commitment to delivering a high-quality application.
+Google Lighthouse is an invaluable tool for evaluating the performance, accessibility, best practices, and search engine optimization of web pages. The tool provides a comprehensive assessment of various metrics, offering insights into different aspects of the website's performance.
 
+The Lighthouse assessment of the ReciPie website yielded the following results:
 
-#### Lighthouse Testing
+- Performance: 74/100
+- Accessibility: 100/100
+- Best Practices: 83/100
+- SEO: Not explicitly mentioned
+- PWA (Progressive Web App): Not applicable in this context
 
-Google Lighthouse was employed to obtain a holistic assessment of the website's performance. Although every test area returned a green score surpassing 90, the aggregate performance score varied based on the internet connection speed during the test. Scores ranged between 92 and 100 upon multiple test runs. The accessibility score was slightly affected due to non-sequential usage of headings across the site. The best practice score was influenced by the included JavaScript files from Mailchimp and Stripe, alongside the use of Bootstrap and jQuery libraries.
+The performance score, while at 74, fluctuated due to the variance in internet connection speeds during testing. It's important to note that the performance score is calculated directly from metrics such as First Contentful Paint, Largest Contentful Paint, Total Blocking Time, Cumulative Layout Shift, and Speed Index.
 
-![Google Lighthouse Results](/static/docs/img/features/lighthouse.png)
+The accessibility score of 100 indicates a high level of compliance with accessibility standards. However, it's important to remember that automatic detection may not identify all issues, making manual testing and review a crucial step in ensuring full accessibility.
 
-#### Notable Bugs
+The best practices score of 83 indicates that while the site adheres to many best practices, there's room for further optimization. It's worth noting that best practices encompass various aspects, including security measures and efficient resource usage.
 
--
+The SEO score is not explicitly mentioned in the provided Lighthouse report. However, it's essential to focus on content best practices, ensuring meta descriptions and image attributes are effectively utilized to improve search engine visibility.
+
+For a more comprehensive breakdown of the Lighthouse testing results, including specific opportunities and diagnostics, please refer to the detailed report available in the [TESTING.md - Lighthouse Testing](TESTING.md#lighthouse-testing).
+
+Here's a snapshot of the Lighthouse report for your reference:
+![Google Lighthouse Results](static/Images/LighthouseTesting.PNG)
+
+## Notable Bugs
+
+During the development of Recipie, several notable bugs were encountered and resolved to ensure a smooth user experience. Detailed information about these bugs, their fixes, and preventive actions taken can be found in the [TESTING.md - Notable Bugs](/TESTING.md#notable-bugs) section. Here are some of the bugs that were identified:
+
+1. **Recipe Image Display**: Images for recipes were not displaying due to incorrect file paths. The issue was fixed by adjusting media settings.
+2. **Comment Deletion**: Users could delete comments not authored by them. Permissions were refined to prevent unauthorized deletion.
+3. **Pagination Issue**: Pagination for RecipeListView malfunctioned, showing all recipes on a single page. The paginator configuration was fixed.
+4. **Search Bar Compatibility**: The search bar didn't return accurate results. Query processing logic was modified for accurate matching.
+5. **Inconsistent Styling on Mobile Devices**: Inconsistent styling on mobile devices was fixed by adding media queries and optimizing CSS rules.
+
+These bugs provided valuable learning experiences and contributed to a more robust website.
 
 #### Technologies Used
 
-- **Python**: The primary language for the project. Various modules were employed, including Django for the main framework and others such as Django AllAuth for enhanced user account management.
-  
-- **Heroku**: Served as the cloud platform for site deployment.
-  
-- **Heroku PostgreSQL**: The designated database for both development and production phases.
+- **Python**: Used as the main language.
+- **Heroku**: For site deployment.
+- **ElephantSQL**: The database for both development and production.
+- **JavaScript**: For various functionalities.
+- **Bootstrap 5.2**: For layout and design.
+- **Font Awesome**: For iconography.
+- **CSS**: For custom design elements.
+- **HTML**: For template creation.
 
-- **JavaScript**: Employed for several site functionalities.
-  
-- **Bootstrap 5.2**: Assisted in the general layout and spacing.
-  
-- **Font Awesome**: Provided access to multiple icons.
-  
-- **CSS**: Written customarily for the site's aesthetics and design.
-  
-- **HTML**: The foundational language for the created templates.
+## Packages and Tools
 
-#### Packages Used
-
-- **Git Pod**: The primary development environment.
-  
-- **Git**: Facilitated version control and file transfers between the code editor and the repository.
-  
-- **GitHub**: Housed the project files.
-  
-- **Balsamiq**: Assisted in wireframe creation for the site.
+- **Git Pod**: This IDE ensured a streamlined development environment.
+- **Git**: Vital for version control, enabling tracking of changes and collaboration.
+- **GitHub**: Hosts the project repository and facilitates version tracking.
+- **MockFlow**: An intuitive tool for crafting wireframes.
 
 #### Resources Used
 
-Throughout the development process, various resources such as the Django documentation, HTMX documentation, Django AllAuth documentation, and the Code Institute reference materials were invaluable. Every resource used is cited appropriately.
-
+Various resources like Django documentation, HTMX documentation, Django AllAuth documentation, and Code Institute materials were extensively used and properly cited.
 
 ---
 
-## Deployment 🚀
+## Deployment
 
-The Pie Central website has been developed using Gitpod, specifically from a template provided by Code Institute. The codebase for the site is hosted on GitHub, and the live site is deployed via Heroku. Below are the steps that outline the deployment process:
+The Recipie website was developed in Gitpod, hosted on GitHub, and deployed via Heroku. The deployment process is outlined below:
 
 ### Setting up in Gitpod:
 
-1. **Starting with the Code Institute Template**:
-   - The project was initialized using a Gitpod template provided by Code Institute. This template sets up an environment with some necessary tools and extensions beneficial for development.
-
-2. **GitHub Repository Setup**:
-   - Within the Gitpod workspace, a new git repository was initiated using `git init`.
-   - This local repository was then linked to a corresponding GitHub repository.
-
-3. **Regular Commits**:
-   - During the development phase, regular commits were made to ensure a documented progression.
-   - These commits were pushed to the GitHub repository with the `git push` command.
+1. Initialization with the Code Institute Template.
+2. Setup of the GitHub Repository.
+3. Regular commits and pushes to the GitHub repository.
 
 ### Heroku Deployment:
 
-1. **Creation of Heroku App**: 
-   - A new Heroku app was established post-login.
-   - The deploy tab was navigated, and the GitHub account was connected, subsequently linking the Pie Central repository.
-
-2. **Configuring Environment Variables**: 
-   - The 'Config Vars' section was accessed under the settings tab of the Heroku app.
-   - Necessary environment variables were set here, ensuring sensitive information remains confidential and away from version control.
-
-3. **Enabling Automatic Deployment**:
-   - The deployment method set to GitHub can be found within the deploy tab.
-   - Automatic deployment was enabled for the master branch. This configuration ensures that each time a push is made to this branch on GitHub, Heroku automatically deploys the updates.
+1. Creation of the Heroku App.
+2. Configuring Environment Variables.
+3. Enabling Automatic Deployment.
 
 ### Local Execution:
 
-- For the purposes of local development and testing, the project was hosted in Gitpod.
-- Dependencies were managed using `pip install -r requirements.txt`.
-- The `heroku local` command enabled viewing of the app within a local environment.
+Local development and testing utilized Gitpod as the environment. Dependencies were managed via `pip install -r requirements.txt`. The local app could be viewed with the `heroku local` command.
 
-By using the Gitpod template from Code Institute, integrating Gitpod with GitHub, and then connecting GitHub to Heroku, a streamlined deployment process was maintained. This structure supports efficient development, testing, and live application updates.
-
----
+Using Code Institute's Gitpod template, coupled with GitHub and Heroku, facilitated a smooth development and deployment process.
